@@ -1,0 +1,220 @@
+/* main css file for porfolio */
+
+/* custom fonts */
+@font-face {
+    font-family: Mulish-Light;
+    src: url(../fonts/Mulish-VariableFont_wght.ttf);
+    font-variation-settings: "wght" 200; /* controls variable font settings for weight: wght */
+}
+
+@font-face {
+    font-family: Garamond-Normal;
+    src: url(../fonts/EBGaramond-VariableFont_wght.ttf);
+    font-variation-settings: "wght" 150; /* controls variable font settings for weight: wght */
+}
+
+/* main style of text/page */
+p, .d-content a {
+    font-family: Mulish-Light;
+    color: #ffffff;
+}
+
+h1, h2, .menu-button {
+    font-family: Garamond-Normal;
+    color: #ffffff;
+}
+
+p {
+    font-size: 16pt;
+}
+
+h1 {
+    font-size: 56px;
+}
+
+h2 {
+    font-size: 48px;
+}
+
+body {
+    background-color: rgb(38, 39, 40);
+    
+}
+
+/* background image; done as not background-image property for more control and future parallax */
+.homepage-cover {
+    width: 1500px;
+    opacity: 50%; /* opacity on top of background is used here (as opposed to an overlay) for convenience */
+    position: fixed; 
+    top: -300px; /* width and position are static so even while resizing it looks ok */
+    left: -30px;
+}
+
+/* flex container for main content organization */
+.flex-container{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: space-between;
+    align-items: center;
+} /* still havent figured out how to take full width, centering seems to work ok? */
+
+.gallery-flex-wrapper {
+    display: flex;
+    flex-flow: nowrap row;
+    align-items: left;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.gallery-flex-wrapper .gallery-flex-container {
+    display: flex;
+    flex-flow: wrap column;
+    align-items: center;
+    width: 33.3333%;
+    justify-content: normal;
+    
+    /* items base percentage width on thier parent */
+} 
+
+.gallery-flex-wrapper .gallery-flex-container-alt{
+    width: auto;
+} 
+
+/* gim1 is a flex box to evenly space its children and add padding*/
+.gimBox-s1{
+    width: 98%;
+    justify-content: space-between;
+    display: flex;
+    padding-bottom: 1.5%;
+
+}
+
+
+
+.gimBox-s2{
+    width: 98%;
+}
+
+.gimBox-s2 .gal-img{
+    width: 100%;
+}
+
+/* broken and sad */
+/* .gimBox-s2 .gal-img-novel{
+    width: 200%;
+}
+
+.gimBox-s2 .gal-spacer{
+    display: block;
+    width: 200px;
+    height: auto;
+    background-color: brown;
+    width: 100%;
+}
+
+.gimBox-s2 .gal-spacer-active{
+    /* display: inline; 
+    background-color: brown; 
+    width: 100%;
+} */
+
+/* navbar and children */
+ul.bottom-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(38, 39, 40);   
+    overflow: hidden; 
+}
+
+li.left {
+    float: left;
+}
+
+li.right {
+    float: right;
+}
+
+a {
+    display: block;
+    padding: 2vh;
+    color: #ffffff;
+}
+
+li a {
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(14, 14, 15);
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+/* buttons and menu hover display */
+/* main button format, applied to all menu buttons */
+.menu-button { 
+    vertical-align: auto;
+    background: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 22px;
+    border: none;
+}
+
+.menu-button a {
+    text-decoration: underline;
+}
+
+.menu-button:hover, .menu-button a:hover {
+    color: #bebebe;
+}
+
+.d-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(38, 39, 40);
+}
+
+.d-content a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* on hover, link menu is displayed */
+.dropdown:hover .d-content { display: block; }
+
+.d-content a:hover {
+    background-color: rgb(14, 14, 15);
+}
+
+.comic-page {
+    width: auto;
+    height: 90vh;
+
+
+}
+
+.page-arrows {
+    display: flex;
+
+}
+
+.page-button {
+    display: block;
+    background: rgb(38, 39, 40);
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 30px;
+    padding-top: 5.5px;
+    position: relative;
+
+}
+
+.page-button:hover {
+    background-color: rgb(14, 14, 15);
+}
