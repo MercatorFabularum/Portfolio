@@ -14,7 +14,7 @@
 }
 
 /* main style of text/page */
-p, .d-content a {
+p, h3, .d-content a {
     font-family: Mulish-Light;
     color: #ffffff;
 }
@@ -34,6 +34,10 @@ h1 {
 
 h2 {
     font-size: 48px;
+}
+
+h3 {
+    font-size: 10pt;
 }
 
 body {
