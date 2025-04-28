@@ -47,11 +47,11 @@ body {
 
 /* background image; done as not background-image property for more control and future parallax */
 .homepage-cover {
-    width: 1500px;
+    width: 110vw;
     opacity: 50%; /* opacity on top of background is used here (as opposed to an overlay) for convenience */
     position: fixed; 
-    top: -300px; /* width and position are static so even while resizing it looks ok */
-    left: -30px;
+    top: -45vh; /* width and position are static so even while resizing it looks ok */
+    left: -3vw;
 }
 
 /* flex container for main content organization */
