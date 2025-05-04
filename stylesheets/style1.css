@@ -146,6 +146,11 @@ a {
     color: #ffffff;
 }
 
+a.in-text-link{
+    display: inline;
+    padding: 0;
+}
+
 li a {
     text-decoration: none;
 }
