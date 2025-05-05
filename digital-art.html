@@ -9,23 +9,43 @@
 
     <script>
     //    WIP function on displaying art descriptions
-       function artPopup(){
+       function artPopup(myId, myDescId){
             // let topWrap = document.getElementById("egg2");
             // topWrap.classList.toggle("gallery-flex-container-alt");
             
             // let pic = document.getElementById("egg2");
             // pic.classList.toggle("full");
             
-            let greg = document.getElementsByClassName("gal-img");
-            for (i = 0; i < greg.length; i++){
-                greg[i].classList.toggle("" , true); // force toggles to minimized
 
+
+            // let greg = document.getElementsByClassName("gal-img");
+            // for (i = 0; i < greg.length; i++){
+            //     greg[i].classList.toggle("" , true); // force toggles to minimized
+
+            // }
+            
+            // gets the triggering element by passing it's id when the function is called
+            let toToggle = document.getElementById(myId);
+
+            // similar process for description to be shown/hidden
+            let toShow = document.getElementById(myDescId);
+            // checks if the art piece has "grown" and toggles apropriately
+            // TODO: close all other "open" pieces
+            // TODO: smooth animation?
+            if (toToggle.style.width == "67%"){
+                toToggle.style.width = "33%";
+                toShow.style.display = "none";
+            }
+            else {
+                toToggle.style.width = "67%";
+                toShow.style.display = "flex";
             }
             
-            let galBox = document.getElementById("egg2");
-            galBox.classList.toggle("gal-img-novel");
-            let spacerrrr = document.getElementById("egg23");
-            spacerrrr.classList.toggle("gal-spacer-active");
+            
+            // let galBox = document.getElementById("egg2");
+            // galBox.classList.toggle("gal-img-novel");
+            // let spacerrrr = document.getElementById("egg23");
+            // spacerrrr.classList.toggle("gal-spacer-active");
             
         }
 // bronken
@@ -50,15 +70,16 @@
     <!-- gimBox-s2 (or s1; 2 is normal, 1 is half-size) determines the size of the image -->
     <!-- using a flex container b/c I'm basically creating a funky table; so it can have auto sized columns and adaptability -->
     <div class="gallery-flex-wrapper">
-        <div class="gallery-flex-container"> <!--main content is placed in a flex container for easy centering/spacing-->
+        <!-- <div class="gallery-flex-container">  -->
+            <!--main content is placed in a flex container for easy centering/spacing-->
             
             <!-- images can be stacked -->
             
             <!-- opening eye pt.1 -->
-            <div class="gimBox-s2">
-                <img src="images/porfolio-art/digital/opening-eye-1.png" class="gal-img" id="egg2" onclick="artPopup()">
+            <div class="gimBox-s2" onclick="artPopup('1', '1-text')" id="1">
+                <img src="images/porfolio-art/digital/opening-eye-1.png" class="gal-img">
                 <h3>"Opening Eye pt.1"</h3>
-                <!-- <p class="poppy">Here's Some text</p> -->
+                <p class="desc-text" id="1-text">Here's Some text</p>
             </div>
             <!-- override vent -->
             <div class="gimBox-s2">
@@ -71,9 +92,9 @@
                 <h3>Arend Hall Sticker - printed 2023</h3>
             </div>
 
-        </div>
+        <!-- </div> -->
 
-        <div class="gallery-flex-container">
+        <!-- <div class="gallery-flex-container"> -->
             
             <!-- opening eye pt.2 -->
             <div class="gimBox-s2">
@@ -93,9 +114,9 @@
                 <h3>"Isometric Room"</h3>
             </div>
 
-        </div>
+        <!-- </div> -->
 
-        <div class="gallery-flex-container">
+        <!-- <div class="gallery-flex-container"> -->
             
             <!-- opening eye pt.3 -->
             <div class="gimBox-s2">
@@ -114,7 +135,7 @@
             </div>
             
         </div> 
-    </div>
+    <!-- </div> -->
     
     <!--spacer-->
     <div style="height: 200px"></div>

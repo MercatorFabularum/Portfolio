@@ -64,11 +64,12 @@ body {
 
 .gallery-flex-wrapper {
     display: flex;
-    flex-flow: nowrap row;
+    flex-flow: wrap row;
     align-items: left;
     width: 80%;
     margin: auto;
     justify-content: space-between;
+    
 }
 
 .gallery-flex-wrapper .gallery-flex-container {
@@ -94,21 +95,28 @@ body {
 
 }
 
+/* description text is hidden until called */
+p.desc-text {
+    display: none;
+}
 
 
 .gimBox-s2{
-    width: 98%;
+    /* width: 98%; */
+    width: 33%;
+    
 }
 
 .gimBox-s2 .gal-img{
     width: 100%;
+    
 }
 
 /* broken and sad */
 /* .gimBox-s2 .gal-img-novel{
     width: 200%;
 }
-
+/*
 .gimBox-s2 .gal-spacer{
     display: block;
     width: 200px;
