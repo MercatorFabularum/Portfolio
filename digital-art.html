@@ -48,6 +48,23 @@
             // spacerrrr.classList.toggle("gal-spacer-active");
             
         }
+
+        function cleanUpTog(myId, myDescId){
+            // gets the triggering element by passing it's id when the function is called
+            let toToggle = document.getElementById(myId);
+
+            // similar process for description to be shown/hidden
+            let toShow = document.getElementById(myDescId);
+            // checks if the art piece has "grown" and toggles apropriately
+            // TODO: close all other "open" pieces
+            // TODO: smooth animation?
+            
+            toToggle.style.width = "33%";
+            toShow.style.display = "none";
+            
+           
+        }
+
 // bronken
 
 
@@ -58,7 +75,7 @@
 
 </head>
 
-<body>
+<body onload="">
     <!-- header is in main flex container -->
     <div class="flex-container">
         <h1>Digital Art</h1>
@@ -73,14 +90,20 @@
         <!-- <div class="gallery-flex-container">  -->
             <!--main content is placed in a flex container for easy centering/spacing-->
             
+            <!-- need to figure out whats up with  -->
+
             <!-- images can be stacked -->
             
             <!-- opening eye pt.1 -->
             <div class="gimBox-s2" onclick="artPopup('1', '1-text')" id="1">
                 <img src="images/porfolio-art/digital/opening-eye-1.png" class="gal-img">
                 <h3>"Opening Eye pt.1"</h3>
-                <p class="desc-text" id="1-text">Here's Some text</p>
+                
             </div>
+                <div class="gimBox-s2 desc-text" id="1-text">
+                    <p>Here's Some text</p>
+                </div>
+
             <!-- override vent -->
             <div class="gimBox-s2">
                 <img src="images/porfolio-art/digital/override.png" class="gal-img" style="width: 100%;">

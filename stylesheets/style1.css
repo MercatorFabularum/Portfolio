@@ -96,8 +96,9 @@ body {
 }
 
 /* description text is hidden until called */
-p.desc-text {
+.desc-text{
     display: none;
+
 }
 
 
