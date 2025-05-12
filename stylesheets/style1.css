@@ -239,3 +239,8 @@ li a:hover {
 .page-button:hover {
     background-color: rgb(14, 14, 15);
 }
+
+/* allows for easy division of inline blocks */
+.spacer {
+    display: block;
+}
