@@ -42,6 +42,9 @@ h3 {
 
 body {
     background-color: rgb(38, 39, 40);
+    /* added b/c of https://stackoverflow.com/questions/4781573/how-can-i-make-a-bar-flush-with-the-top-left-and-right-of-a-browser-window-in */
+    padding: 0px;
+    border: 0px;
     
 }
 
@@ -50,7 +53,7 @@ body {
     width: 110vw;
     opacity: 50%; /* opacity on top of background is used here (as opposed to an overlay) for convenience */
     position: fixed; 
-    top: -45vh; /* width and position are static so even while resizing it looks ok */
+    top: -45vh; /* width and position are static so even while resizing it looks ok (why did it get reset??? */
     left: -3vw;
 }
 
