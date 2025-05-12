@@ -243,5 +243,5 @@ li a:hover {
 /* allows for easy division of inline blocks */
 .spacer {
     display: block;
-    height: 10vh;
+    height: 15vh;
 }
