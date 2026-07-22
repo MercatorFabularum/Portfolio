@@ -59,10 +59,16 @@ TODO:
 
 <body style="overscroll-behavior: none;">
 
+    <!-- https://www.w3schools.com/html/html_images_picture.asp -->
     <!-- background image, will have things on top of it -->
     <!-- done as a seprate aspect from background-image for extra flexibility -->
-    <img class="homepage-cover" src="images/porfolio-art/traditional/Sunset_Walk.png" style="z-index: -1;">
-
+    <picture>
+        <source media="(min-width: 1300px)" srcset="images/Home_Page-Background/computer.png">
+        <source media="(min-width: 950px)" srcset="images/Home_Page-Background/tab2.png">
+        <source media="(min-width: 700px)" srcset="images/Home_Page-Background/tab.png">
+        <img class="homepage-cover" src="images/Home_Page-Background/phone.png" style="z-index: -1;">
+    </picture>
+    
     <!--main layout of page-->
     <div class="flex-container" style="z-index: 0;">
         <!--blank div "box" is set to view height to allow seeing BG image-->
@@ -140,7 +146,11 @@ TODO:
                         </p>
                     </td>
                     <td style="width: 50%; text-align: center;">
-                        <img src="images/vectorized-photo.png" style="height: 425px; padding-top: 100px;" >
+                        <!-- picture makes sure image is only shown if there is room for it -->
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="images/vectorized-photo.png">
+                            <img src="" style="height: 425px; padding-top: 100px;">
+                        </picture>
                     </td>
                 </tr>
             </table>
